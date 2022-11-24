@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="c495734d-41d2-45f3-8272-a50e4f89fb84" activeEnvironment="Default" name="SOAP_Time" soapui-version="5.7.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="6a2874fc-4f70-4560-a79b-ed1d3d0c3445" wsaVersion="NONE" name="TimeSoap12" type="wsdl" bindingName="{http://tempuri.org/}TimeSoap12" soapVersion="1_2" anonymous="optional" definition="https://www.satan.lt/WebServices/Time.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint></con:endpoints><con:operation id="05ce2ffd-8624-4263-a292-5b68457064d9" isOneWay="false" action="http://tempuri.org/GetDatabaseInfo" name="GetDatabaseInfo" bindingOperationName="GetDatabaseInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6805c6b0-f35d-4062-88ed-b9303506997b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:GetDatabaseInfo/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/TimeSoap/GetDatabaseInfoRequest"/></con:call></con:operation><con:operation id="aaa8cd82-19c6-4e5b-b87b-8921ae519cbb" isOneWay="false" action="http://tempuri.org/GetDatabaseUtcTime" name="GetDatabaseUtcTime" bindingOperationName="GetDatabaseUtcTime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d3ed20a2-c363-4bec-9afc-13dcee8110e8" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:GetDatabaseUtcTime/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/TimeSoap/GetDatabaseUtcTimeRequest"/></con:call></con:operation><con:operation id="57554d78-84cc-42e6-a864-9ca2007ce4a5" isOneWay="false" action="http://tempuri.org/GetRemoteTime" name="GetRemoteTime" bindingOperationName="GetRemoteTime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fe85ec89-20ac-4676-9751-ad96097bac42" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:GetRemoteTime/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/TimeSoap/GetRemoteTimeRequest"/></con:call></con:operation><con:operation id="7f5b2e9d-32a5-485a-be22-ed196dad286b" isOneWay="false" action="http://tempuri.org/GetServerLocalTime" name="GetServerLocalTime" bindingOperationName="GetServerLocalTime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e4ff55bd-8b87-41d4-bec5-7efc67770bec" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:GetServerLocalTime/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/TimeSoap/GetServerLocalTimeRequest"/></con:call></con:operation><con:operation id="47593204-9042-4d37-9d7d-b9c5bed84e27" isOneWay="false" action="http://tempuri.org/GetServerUtcTime" name="GetServerUtcTime" bindingOperationName="GetServerUtcTime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ea92e7e4-7793-4529-b7f1-959987f6821f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:tem="http://tempuri.org/">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <tem:GetServerUtcTime/>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/TimeSoap/GetServerUtcTimeRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="3177bb43-011a-4583-8944-e4339eb6e785" wsaVersion="NONE" name="TimeSoap" type="wsdl" bindingName="{http://tempuri.org/}TimeSoap" soapVersion="1_1" anonymous="optional" definition="https://www.satan.lt/WebServices/Time.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://www.satan.lt/WebServices/Time.asmx?WSDL"><con:part><con:url>https://www.satan.lt/WebServices/Time.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetDatabaseInfo">
+        <s:complexType/>
+      </s:element>
+      <s:element name="GetDatabaseInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDatabaseInfoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema"/>
+                  <s:any/>
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDatabaseUtcTime">
+        <s:complexType/>
+      </s:element>
+      <s:element name="GetDatabaseUtcTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetDatabaseUtcTimeResult" type="s:dateTime"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRemoteTime">
+        <s:complexType/>
+      </s:element>
+      <s:element name="GetRemoteTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRemoteTimeResult" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServerLocalTime">
+        <s:complexType/>
+      </s:element>
+      <s:element name="GetServerLocalTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetServerLocalTimeResult" type="s:dateTime"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetServerUtcTime">
+        <s:complexType/>
+      </s:element>
+      <s:element name="GetServerUtcTimeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetServerUtcTimeResult" type="s:dateTime"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema"/>
+            <s:any/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dateTime" type="s:dateTime"/>
+      <s:element name="string" nillable="true" type="s:string"/>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDatabaseInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatabaseInfo"/>
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatabaseInfoResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseUtcTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDatabaseUtcTime"/>
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseUtcTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDatabaseUtcTimeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetRemoteTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRemoteTime"/>
+  </wsdl:message>
+  <wsdl:message name="GetRemoteTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRemoteTimeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetServerLocalTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerLocalTime"/>
+  </wsdl:message>
+  <wsdl:message name="GetServerLocalTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerLocalTimeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetServerUtcTimeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetServerUtcTime"/>
+  </wsdl:message>
+  <wsdl:message name="GetServerUtcTimeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetServerUtcTimeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseInfoHttpGetIn"/>
+  <wsdl:message name="GetDatabaseInfoHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet"/>
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseUtcTimeHttpGetIn"/>
+  <wsdl:message name="GetDatabaseUtcTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:dateTime"/>
+  </wsdl:message>
+  <wsdl:message name="GetRemoteTimeHttpGetIn"/>
+  <wsdl:message name="GetRemoteTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetServerLocalTimeHttpGetIn"/>
+  <wsdl:message name="GetServerLocalTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:dateTime"/>
+  </wsdl:message>
+  <wsdl:message name="GetServerUtcTimeHttpGetIn"/>
+  <wsdl:message name="GetServerUtcTimeHttpGetOut">
+    <wsdl:part name="Body" element="tns:dateTime"/>
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseInfoHttpPostIn"/>
+  <wsdl:message name="GetDatabaseInfoHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet"/>
+  </wsdl:message>
+  <wsdl:message name="GetDatabaseUtcTimeHttpPostIn"/>
+  <wsdl:message name="GetDatabaseUtcTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:dateTime"/>
+  </wsdl:message>
+  <wsdl:message name="GetRemoteTimeHttpPostIn"/>
+  <wsdl:message name="GetRemoteTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string"/>
+  </wsdl:message>
+  <wsdl:message name="GetServerLocalTimeHttpPostIn"/>
+  <wsdl:message name="GetServerLocalTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:dateTime"/>
+  </wsdl:message>
+  <wsdl:message name="GetServerUtcTimeHttpPostIn"/>
+  <wsdl:message name="GetServerUtcTimeHttpPostOut">
+    <wsdl:part name="Body" element="tns:dateTime"/>
+  </wsdl:message>
+  <wsdl:portType name="TimeSoap">
+    <wsdl:operation name="GetDatabaseInfo">
+      <wsdl:documentation>Get information about database time.</wsdl:documentation>
+      <wsdl:input message="tns:GetDatabaseInfoSoapIn"/>
+      <wsdl:output message="tns:GetDatabaseInfoSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseUtcTime">
+      <wsdl:documentation>Get database UTC time.</wsdl:documentation>
+      <wsdl:input message="tns:GetDatabaseUtcTimeSoapIn"/>
+      <wsdl:output message="tns:GetDatabaseUtcTimeSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTime">
+      <wsdl:documentation>Get remote server UTC time.</wsdl:documentation>
+      <wsdl:input message="tns:GetRemoteTimeSoapIn"/>
+      <wsdl:output message="tns:GetRemoteTimeSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerLocalTime">
+      <wsdl:documentation>Get Local time of Server.</wsdl:documentation>
+      <wsdl:input message="tns:GetServerLocalTimeSoapIn"/>
+      <wsdl:output message="tns:GetServerLocalTimeSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerUtcTime">
+      <wsdl:documentation>Get UTC time of Server.</wsdl:documentation>
+      <wsdl:input message="tns:GetServerUtcTimeSoapIn"/>
+      <wsdl:output message="tns:GetServerUtcTimeSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TimeHttpGet">
+    <wsdl:operation name="GetDatabaseInfo">
+      <wsdl:documentation>Get information about database time.</wsdl:documentation>
+      <wsdl:input message="tns:GetDatabaseInfoHttpGetIn"/>
+      <wsdl:output message="tns:GetDatabaseInfoHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseUtcTime">
+      <wsdl:documentation>Get database UTC time.</wsdl:documentation>
+      <wsdl:input message="tns:GetDatabaseUtcTimeHttpGetIn"/>
+      <wsdl:output message="tns:GetDatabaseUtcTimeHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTime">
+      <wsdl:documentation>Get remote server UTC time.</wsdl:documentation>
+      <wsdl:input message="tns:GetRemoteTimeHttpGetIn"/>
+      <wsdl:output message="tns:GetRemoteTimeHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerLocalTime">
+      <wsdl:documentation>Get Local time of Server.</wsdl:documentation>
+      <wsdl:input message="tns:GetServerLocalTimeHttpGetIn"/>
+      <wsdl:output message="tns:GetServerLocalTimeHttpGetOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerUtcTime">
+      <wsdl:documentation>Get UTC time of Server.</wsdl:documentation>
+      <wsdl:input message="tns:GetServerUtcTimeHttpGetIn"/>
+      <wsdl:output message="tns:GetServerUtcTimeHttpGetOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TimeHttpPost">
+    <wsdl:operation name="GetDatabaseInfo">
+      <wsdl:documentation>Get information about database time.</wsdl:documentation>
+      <wsdl:input message="tns:GetDatabaseInfoHttpPostIn"/>
+      <wsdl:output message="tns:GetDatabaseInfoHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseUtcTime">
+      <wsdl:documentation>Get database UTC time.</wsdl:documentation>
+      <wsdl:input message="tns:GetDatabaseUtcTimeHttpPostIn"/>
+      <wsdl:output message="tns:GetDatabaseUtcTimeHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTime">
+      <wsdl:documentation>Get remote server UTC time.</wsdl:documentation>
+      <wsdl:input message="tns:GetRemoteTimeHttpPostIn"/>
+      <wsdl:output message="tns:GetRemoteTimeHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerLocalTime">
+      <wsdl:documentation>Get Local time of Server.</wsdl:documentation>
+      <wsdl:input message="tns:GetServerLocalTimeHttpPostIn"/>
+      <wsdl:output message="tns:GetServerLocalTimeHttpPostOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerUtcTime">
+      <wsdl:documentation>Get UTC time of Server.</wsdl:documentation>
+      <wsdl:input message="tns:GetServerUtcTimeHttpPostIn"/>
+      <wsdl:output message="tns:GetServerUtcTimeHttpPostOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TimeSoap" type="tns:TimeSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetDatabaseInfo">
+      <soap:operation soapAction="http://tempuri.org/GetDatabaseInfo" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseUtcTime">
+      <soap:operation soapAction="http://tempuri.org/GetDatabaseUtcTime" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTime">
+      <soap:operation soapAction="http://tempuri.org/GetRemoteTime" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerLocalTime">
+      <soap:operation soapAction="http://tempuri.org/GetServerLocalTime" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerUtcTime">
+      <soap:operation soapAction="http://tempuri.org/GetServerUtcTime" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TimeSoap12" type="tns:TimeSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetDatabaseInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetDatabaseInfo" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseUtcTime">
+      <soap12:operation soapAction="http://tempuri.org/GetDatabaseUtcTime" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTime">
+      <soap12:operation soapAction="http://tempuri.org/GetRemoteTime" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerLocalTime">
+      <soap12:operation soapAction="http://tempuri.org/GetServerLocalTime" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerUtcTime">
+      <soap12:operation soapAction="http://tempuri.org/GetServerUtcTime" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TimeHttpGet" type="tns:TimeHttpGet">
+    <http:binding verb="GET"/>
+    <wsdl:operation name="GetDatabaseInfo">
+      <http:operation location="/GetDatabaseInfo"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseUtcTime">
+      <http:operation location="/GetDatabaseUtcTime"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTime">
+      <http:operation location="/GetRemoteTime"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerLocalTime">
+      <http:operation location="/GetServerLocalTime"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerUtcTime">
+      <http:operation location="/GetServerUtcTime"/>
+      <wsdl:input>
+        <http:urlEncoded/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TimeHttpPost" type="tns:TimeHttpPost">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="GetDatabaseInfo">
+      <http:operation location="/GetDatabaseInfo"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDatabaseUtcTime">
+      <http:operation location="/GetDatabaseUtcTime"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRemoteTime">
+      <http:operation location="/GetRemoteTime"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerLocalTime">
+      <http:operation location="/GetServerLocalTime"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerUtcTime">
+      <http:operation location="/GetServerUtcTime"/>
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Time">
+    <wsdl:port name="TimeSoap" binding="tns:TimeSoap">
+      <soap:address location="https://www.satan.lt/WebServices/Time.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="TimeSoap12" binding="tns:TimeSoap12">
+      <soap12:address location="https://www.satan.lt/WebServices/Time.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="TimeHttpGet" binding="tns:TimeHttpGet">
+      <http:address location="https://www.satan.lt/WebServices/Time.asmx"/>
+    </wsdl:port>
+    <wsdl:port name="TimeHttpPost" binding="tns:TimeHttpPost">
+      <http:address location="https://www.satan.lt/WebServices/Time.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint></con:endpoints><con:operation id="18855505-f668-476d-a1cc-374aac175d77" isOneWay="false" action="http://tempuri.org/GetDatabaseInfo" name="GetDatabaseInfo" bindingOperationName="GetDatabaseInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e9fb4251-2caf-4a32-ba2e-379386b99db2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetDatabaseInfo/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetDatabaseInfo"/></con:call></con:operation><con:operation id="f661fd57-f65f-4a14-87ce-e3c3f96c2636" isOneWay="false" action="http://tempuri.org/GetDatabaseUtcTime" name="GetDatabaseUtcTime" bindingOperationName="GetDatabaseUtcTime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="325df160-ba91-4efb-b5dc-bbf30fa1054d" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetDatabaseUtcTime/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetDatabaseUtcTime"/></con:call></con:operation><con:operation id="0e5766b0-e3b3-4f35-af5d-fee0b66bb198" isOneWay="false" action="http://tempuri.org/GetRemoteTime" name="GetRemoteTime" bindingOperationName="GetRemoteTime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1786693d-6438-4d12-93a7-0ef17b701574" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetRemoteTime/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetRemoteTime"/></con:call></con:operation><con:operation id="ad3b11b7-330a-4c9f-8f09-607fe53a7c88" isOneWay="false" action="http://tempuri.org/GetServerLocalTime" name="GetServerLocalTime" bindingOperationName="GetServerLocalTime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="3c1ebaaa-0a0f-42fa-8299-45aa5a5223e7" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetServerLocalTime/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetServerLocalTime"/></con:call></con:operation><con:operation id="2723582f-008a-4a66-8043-a735a8e515e5" isOneWay="false" action="http://tempuri.org/GetServerUtcTime" name="GetServerUtcTime" bindingOperationName="GetServerUtcTime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="f5743291-7985-4bab-9218-0607761378fa" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetServerUtcTime/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetServerUtcTime"/></con:call></con:operation></con:interface><con:testSuite id="0063e974-7d3d-46c5-97b8-bbbc82f71c6d" name="TimeSoap TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="a3414295-a416-4130-8004-17d0da946e1a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetDatabaseInfo TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="3118424e-9b0e-41c2-a137-37229e629d30" name="GetDatabaseInfo"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>TimeSoap</con:interface><con:operation>GetDatabaseInfo</con:operation><con:request name="GetDatabaseInfo" id="47dc2b57-94b4-4f2c-99fe-c1d8dce5d7ec"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetDatabaseInfo/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="Valid HTTP Status Codes" id="ac570ce6-29e5-441f-bc47-b931c1c20f4a" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="3cbc6b9b-6c10-4df2-8abd-bd2f291c8ac9" name="Response SLA"><con:configuration><SLA>500</SLA></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://tempuri.org/GetDatabaseInfo" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="4288c641-e9a4-4c68-b658-33769654b009" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetDatabaseUtcTime TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="055ffedf-048d-4a4b-a4ab-be5697e981da" name="GetDatabaseUtcTime"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>TimeSoap</con:interface><con:operation>GetDatabaseUtcTime</con:operation><con:request name="GetDatabaseUtcTime" id="78093068-b0ea-480d-821a-4b701c78b227"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetDatabaseUtcTime/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="Valid HTTP Status Codes" id="eab58e0f-d2bf-4f36-b4f4-6942364be84f" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="5c30bb35-0f8d-475e-b2ef-27a78dc1b72e" name="Response SLA"><con:configuration><SLA>600</SLA></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://tempuri.org/GetDatabaseUtcTime" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="62d55ecb-15bf-4c4a-aaee-094c9c3f5f88" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetRemoteTime TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="c875bcbb-0fb7-4d25-8dd6-c09451e563b5" name="GetRemoteTime"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>TimeSoap</con:interface><con:operation>GetRemoteTime</con:operation><con:request name="GetRemoteTime" id="a04d3bfd-ea68-4f08-acca-18360e08f8a4"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetRemoteTime/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://tempuri.org/GetRemoteTime" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="25ebd743-d88e-4008-8700-ede3be0ff061" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetServerLocalTime TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="75aa7d44-6f00-4597-ad33-9ecb84ba1637" name="GetServerLocalTime"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>TimeSoap</con:interface><con:operation>GetServerLocalTime</con:operation><con:request name="GetServerLocalTime" id="356cd65f-b14d-4202-91fe-0100c307e0ea"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetServerLocalTime/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://tempuri.org/GetServerLocalTime" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="f429782d-c702-401e-87b5-73a94870ce1a" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetServerUtcTime TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="37477712-e98f-49ce-9470-e3d74f3c0300" name="GetServerUtcTime"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>TimeSoap</con:interface><con:operation>GetServerUtcTime</con:operation><con:request name="GetServerUtcTime" id="5d0322e7-d465-4763-90ae-85e1809e75ed"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <tem:GetServerUtcTime/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://tempuri.org/GetServerUtcTime"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
