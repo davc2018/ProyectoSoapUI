@@ -1134,468 +1134,17 @@
    <soapenv:Body>\r
       <web:ListOfLanguagesByName/>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/ListOfLanguagesByNameRequest"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="558c9d1a-4dec-43fd-945b-b10f9761e228" wsaVersion="NONE" name="TimeSoap" type="wsdl" bindingName="{http://tempuri.org/}TimeSoap" soapVersion="1_1" anonymous="optional" definition="https://www.satan.lt/WebServices/Time.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://www.satan.lt/WebServices/Time.asmx?WSDL"><con:part><con:url>https://www.satan.lt/WebServices/Time.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
-  <wsdl:types>
-    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
-      <s:element name="GetDatabaseInfo">
-        <s:complexType/>
-      </s:element>
-      <s:element name="GetDatabaseInfoResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetDatabaseInfoResult">
-              <s:complexType>
-                <s:sequence>
-                  <s:element ref="s:schema"/>
-                  <s:any/>
-                </s:sequence>
-              </s:complexType>
-            </s:element>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="GetDatabaseUtcTime">
-        <s:complexType/>
-      </s:element>
-      <s:element name="GetDatabaseUtcTimeResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="GetDatabaseUtcTimeResult" type="s:dateTime"/>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="GetRemoteTime">
-        <s:complexType/>
-      </s:element>
-      <s:element name="GetRemoteTimeResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="GetRemoteTimeResult" type="s:string"/>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="GetServerLocalTime">
-        <s:complexType/>
-      </s:element>
-      <s:element name="GetServerLocalTimeResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="GetServerLocalTimeResult" type="s:dateTime"/>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="GetServerUtcTime">
-        <s:complexType/>
-      </s:element>
-      <s:element name="GetServerUtcTimeResponse">
-        <s:complexType>
-          <s:sequence>
-            <s:element minOccurs="1" maxOccurs="1" name="GetServerUtcTimeResult" type="s:dateTime"/>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="DataSet" nillable="true">
-        <s:complexType>
-          <s:sequence>
-            <s:element ref="s:schema"/>
-            <s:any/>
-          </s:sequence>
-        </s:complexType>
-      </s:element>
-      <s:element name="dateTime" type="s:dateTime"/>
-      <s:element name="string" nillable="true" type="s:string"/>
-    </s:schema>
-  </wsdl:types>
-  <wsdl:message name="GetDatabaseInfoSoapIn">
-    <wsdl:part name="parameters" element="tns:GetDatabaseInfo"/>
-  </wsdl:message>
-  <wsdl:message name="GetDatabaseInfoSoapOut">
-    <wsdl:part name="parameters" element="tns:GetDatabaseInfoResponse"/>
-  </wsdl:message>
-  <wsdl:message name="GetDatabaseUtcTimeSoapIn">
-    <wsdl:part name="parameters" element="tns:GetDatabaseUtcTime"/>
-  </wsdl:message>
-  <wsdl:message name="GetDatabaseUtcTimeSoapOut">
-    <wsdl:part name="parameters" element="tns:GetDatabaseUtcTimeResponse"/>
-  </wsdl:message>
-  <wsdl:message name="GetRemoteTimeSoapIn">
-    <wsdl:part name="parameters" element="tns:GetRemoteTime"/>
-  </wsdl:message>
-  <wsdl:message name="GetRemoteTimeSoapOut">
-    <wsdl:part name="parameters" element="tns:GetRemoteTimeResponse"/>
-  </wsdl:message>
-  <wsdl:message name="GetServerLocalTimeSoapIn">
-    <wsdl:part name="parameters" element="tns:GetServerLocalTime"/>
-  </wsdl:message>
-  <wsdl:message name="GetServerLocalTimeSoapOut">
-    <wsdl:part name="parameters" element="tns:GetServerLocalTimeResponse"/>
-  </wsdl:message>
-  <wsdl:message name="GetServerUtcTimeSoapIn">
-    <wsdl:part name="parameters" element="tns:GetServerUtcTime"/>
-  </wsdl:message>
-  <wsdl:message name="GetServerUtcTimeSoapOut">
-    <wsdl:part name="parameters" element="tns:GetServerUtcTimeResponse"/>
-  </wsdl:message>
-  <wsdl:message name="GetDatabaseInfoHttpGetIn"/>
-  <wsdl:message name="GetDatabaseInfoHttpGetOut">
-    <wsdl:part name="Body" element="tns:DataSet"/>
-  </wsdl:message>
-  <wsdl:message name="GetDatabaseUtcTimeHttpGetIn"/>
-  <wsdl:message name="GetDatabaseUtcTimeHttpGetOut">
-    <wsdl:part name="Body" element="tns:dateTime"/>
-  </wsdl:message>
-  <wsdl:message name="GetRemoteTimeHttpGetIn"/>
-  <wsdl:message name="GetRemoteTimeHttpGetOut">
-    <wsdl:part name="Body" element="tns:string"/>
-  </wsdl:message>
-  <wsdl:message name="GetServerLocalTimeHttpGetIn"/>
-  <wsdl:message name="GetServerLocalTimeHttpGetOut">
-    <wsdl:part name="Body" element="tns:dateTime"/>
-  </wsdl:message>
-  <wsdl:message name="GetServerUtcTimeHttpGetIn"/>
-  <wsdl:message name="GetServerUtcTimeHttpGetOut">
-    <wsdl:part name="Body" element="tns:dateTime"/>
-  </wsdl:message>
-  <wsdl:message name="GetDatabaseInfoHttpPostIn"/>
-  <wsdl:message name="GetDatabaseInfoHttpPostOut">
-    <wsdl:part name="Body" element="tns:DataSet"/>
-  </wsdl:message>
-  <wsdl:message name="GetDatabaseUtcTimeHttpPostIn"/>
-  <wsdl:message name="GetDatabaseUtcTimeHttpPostOut">
-    <wsdl:part name="Body" element="tns:dateTime"/>
-  </wsdl:message>
-  <wsdl:message name="GetRemoteTimeHttpPostIn"/>
-  <wsdl:message name="GetRemoteTimeHttpPostOut">
-    <wsdl:part name="Body" element="tns:string"/>
-  </wsdl:message>
-  <wsdl:message name="GetServerLocalTimeHttpPostIn"/>
-  <wsdl:message name="GetServerLocalTimeHttpPostOut">
-    <wsdl:part name="Body" element="tns:dateTime"/>
-  </wsdl:message>
-  <wsdl:message name="GetServerUtcTimeHttpPostIn"/>
-  <wsdl:message name="GetServerUtcTimeHttpPostOut">
-    <wsdl:part name="Body" element="tns:dateTime"/>
-  </wsdl:message>
-  <wsdl:portType name="TimeSoap">
-    <wsdl:operation name="GetDatabaseInfo">
-      <wsdl:documentation>Get information about database time.</wsdl:documentation>
-      <wsdl:input message="tns:GetDatabaseInfoSoapIn"/>
-      <wsdl:output message="tns:GetDatabaseInfoSoapOut"/>
-    </wsdl:operation>
-    <wsdl:operation name="GetDatabaseUtcTime">
-      <wsdl:documentation>Get database UTC time.</wsdl:documentation>
-      <wsdl:input message="tns:GetDatabaseUtcTimeSoapIn"/>
-      <wsdl:output message="tns:GetDatabaseUtcTimeSoapOut"/>
-    </wsdl:operation>
-    <wsdl:operation name="GetRemoteTime">
-      <wsdl:documentation>Get remote server UTC time.</wsdl:documentation>
-      <wsdl:input message="tns:GetRemoteTimeSoapIn"/>
-      <wsdl:output message="tns:GetRemoteTimeSoapOut"/>
-    </wsdl:operation>
-    <wsdl:operation name="GetServerLocalTime">
-      <wsdl:documentation>Get Local time of Server.</wsdl:documentation>
-      <wsdl:input message="tns:GetServerLocalTimeSoapIn"/>
-      <wsdl:output message="tns:GetServerLocalTimeSoapOut"/>
-    </wsdl:operation>
-    <wsdl:operation name="GetServerUtcTime">
-      <wsdl:documentation>Get UTC time of Server.</wsdl:documentation>
-      <wsdl:input message="tns:GetServerUtcTimeSoapIn"/>
-      <wsdl:output message="tns:GetServerUtcTimeSoapOut"/>
-    </wsdl:operation>
-  </wsdl:portType>
-  <wsdl:portType name="TimeHttpGet">
-    <wsdl:operation name="GetDatabaseInfo">
-      <wsdl:documentation>Get information about database time.</wsdl:documentation>
-      <wsdl:input message="tns:GetDatabaseInfoHttpGetIn"/>
-      <wsdl:output message="tns:GetDatabaseInfoHttpGetOut"/>
-    </wsdl:operation>
-    <wsdl:operation name="GetDatabaseUtcTime">
-      <wsdl:documentation>Get database UTC time.</wsdl:documentation>
-      <wsdl:input message="tns:GetDatabaseUtcTimeHttpGetIn"/>
-      <wsdl:output message="tns:GetDatabaseUtcTimeHttpGetOut"/>
-    </wsdl:operation>
-    <wsdl:operation name="GetRemoteTime">
-      <wsdl:documentation>Get remote server UTC time.</wsdl:documentation>
-      <wsdl:input message="tns:GetRemoteTimeHttpGetIn"/>
-      <wsdl:output message="tns:GetRemoteTimeHttpGetOut"/>
-    </wsdl:operation>
-    <wsdl:operation name="GetServerLocalTime">
-      <wsdl:documentation>Get Local time of Server.</wsdl:documentation>
-      <wsdl:input message="tns:GetServerLocalTimeHttpGetIn"/>
-      <wsdl:output message="tns:GetServerLocalTimeHttpGetOut"/>
-    </wsdl:operation>
-    <wsdl:operation name="GetServerUtcTime">
-      <wsdl:documentation>Get UTC time of Server.</wsdl:documentation>
-      <wsdl:input message="tns:GetServerUtcTimeHttpGetIn"/>
-      <wsdl:output message="tns:GetServerUtcTimeHttpGetOut"/>
-    </wsdl:operation>
-  </wsdl:portType>
-  <wsdl:portType name="TimeHttpPost">
-    <wsdl:operation name="GetDatabaseInfo">
-      <wsdl:documentation>Get information about database time.</wsdl:documentation>
-      <wsdl:input message="tns:GetDatabaseInfoHttpPostIn"/>
-      <wsdl:output message="tns:GetDatabaseInfoHttpPostOut"/>
-    </wsdl:operation>
-    <wsdl:operation name="GetDatabaseUtcTime">
-      <wsdl:documentation>Get database UTC time.</wsdl:documentation>
-      <wsdl:input message="tns:GetDatabaseUtcTimeHttpPostIn"/>
-      <wsdl:output message="tns:GetDatabaseUtcTimeHttpPostOut"/>
-    </wsdl:operation>
-    <wsdl:operation name="GetRemoteTime">
-      <wsdl:documentation>Get remote server UTC time.</wsdl:documentation>
-      <wsdl:input message="tns:GetRemoteTimeHttpPostIn"/>
-      <wsdl:output message="tns:GetRemoteTimeHttpPostOut"/>
-    </wsdl:operation>
-    <wsdl:operation name="GetServerLocalTime">
-      <wsdl:documentation>Get Local time of Server.</wsdl:documentation>
-      <wsdl:input message="tns:GetServerLocalTimeHttpPostIn"/>
-      <wsdl:output message="tns:GetServerLocalTimeHttpPostOut"/>
-    </wsdl:operation>
-    <wsdl:operation name="GetServerUtcTime">
-      <wsdl:documentation>Get UTC time of Server.</wsdl:documentation>
-      <wsdl:input message="tns:GetServerUtcTimeHttpPostIn"/>
-      <wsdl:output message="tns:GetServerUtcTimeHttpPostOut"/>
-    </wsdl:operation>
-  </wsdl:portType>
-  <wsdl:binding name="TimeSoap" type="tns:TimeSoap">
-    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
-    <wsdl:operation name="GetDatabaseInfo">
-      <soap:operation soapAction="http://tempuri.org/GetDatabaseInfo" style="document"/>
-      <wsdl:input>
-        <soap:body use="literal"/>
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetDatabaseUtcTime">
-      <soap:operation soapAction="http://tempuri.org/GetDatabaseUtcTime" style="document"/>
-      <wsdl:input>
-        <soap:body use="literal"/>
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetRemoteTime">
-      <soap:operation soapAction="http://tempuri.org/GetRemoteTime" style="document"/>
-      <wsdl:input>
-        <soap:body use="literal"/>
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetServerLocalTime">
-      <soap:operation soapAction="http://tempuri.org/GetServerLocalTime" style="document"/>
-      <wsdl:input>
-        <soap:body use="literal"/>
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetServerUtcTime">
-      <soap:operation soapAction="http://tempuri.org/GetServerUtcTime" style="document"/>
-      <wsdl:input>
-        <soap:body use="literal"/>
-      </wsdl:input>
-      <wsdl:output>
-        <soap:body use="literal"/>
-      </wsdl:output>
-    </wsdl:operation>
-  </wsdl:binding>
-  <wsdl:binding name="TimeSoap12" type="tns:TimeSoap">
-    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
-    <wsdl:operation name="GetDatabaseInfo">
-      <soap12:operation soapAction="http://tempuri.org/GetDatabaseInfo" style="document"/>
-      <wsdl:input>
-        <soap12:body use="literal"/>
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetDatabaseUtcTime">
-      <soap12:operation soapAction="http://tempuri.org/GetDatabaseUtcTime" style="document"/>
-      <wsdl:input>
-        <soap12:body use="literal"/>
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetRemoteTime">
-      <soap12:operation soapAction="http://tempuri.org/GetRemoteTime" style="document"/>
-      <wsdl:input>
-        <soap12:body use="literal"/>
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetServerLocalTime">
-      <soap12:operation soapAction="http://tempuri.org/GetServerLocalTime" style="document"/>
-      <wsdl:input>
-        <soap12:body use="literal"/>
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetServerUtcTime">
-      <soap12:operation soapAction="http://tempuri.org/GetServerUtcTime" style="document"/>
-      <wsdl:input>
-        <soap12:body use="literal"/>
-      </wsdl:input>
-      <wsdl:output>
-        <soap12:body use="literal"/>
-      </wsdl:output>
-    </wsdl:operation>
-  </wsdl:binding>
-  <wsdl:binding name="TimeHttpGet" type="tns:TimeHttpGet">
-    <http:binding verb="GET"/>
-    <wsdl:operation name="GetDatabaseInfo">
-      <http:operation location="/GetDatabaseInfo"/>
-      <wsdl:input>
-        <http:urlEncoded/>
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetDatabaseUtcTime">
-      <http:operation location="/GetDatabaseUtcTime"/>
-      <wsdl:input>
-        <http:urlEncoded/>
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetRemoteTime">
-      <http:operation location="/GetRemoteTime"/>
-      <wsdl:input>
-        <http:urlEncoded/>
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetServerLocalTime">
-      <http:operation location="/GetServerLocalTime"/>
-      <wsdl:input>
-        <http:urlEncoded/>
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetServerUtcTime">
-      <http:operation location="/GetServerUtcTime"/>
-      <wsdl:input>
-        <http:urlEncoded/>
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body"/>
-      </wsdl:output>
-    </wsdl:operation>
-  </wsdl:binding>
-  <wsdl:binding name="TimeHttpPost" type="tns:TimeHttpPost">
-    <http:binding verb="POST"/>
-    <wsdl:operation name="GetDatabaseInfo">
-      <http:operation location="/GetDatabaseInfo"/>
-      <wsdl:input>
-        <mime:content type="application/x-www-form-urlencoded"/>
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetDatabaseUtcTime">
-      <http:operation location="/GetDatabaseUtcTime"/>
-      <wsdl:input>
-        <mime:content type="application/x-www-form-urlencoded"/>
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetRemoteTime">
-      <http:operation location="/GetRemoteTime"/>
-      <wsdl:input>
-        <mime:content type="application/x-www-form-urlencoded"/>
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetServerLocalTime">
-      <http:operation location="/GetServerLocalTime"/>
-      <wsdl:input>
-        <mime:content type="application/x-www-form-urlencoded"/>
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body"/>
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="GetServerUtcTime">
-      <http:operation location="/GetServerUtcTime"/>
-      <wsdl:input>
-        <mime:content type="application/x-www-form-urlencoded"/>
-      </wsdl:input>
-      <wsdl:output>
-        <mime:mimeXml part="Body"/>
-      </wsdl:output>
-    </wsdl:operation>
-  </wsdl:binding>
-  <wsdl:service name="Time">
-    <wsdl:port name="TimeSoap" binding="tns:TimeSoap">
-      <soap:address location="https://www.satan.lt/WebServices/Time.asmx"/>
-    </wsdl:port>
-    <wsdl:port name="TimeSoap12" binding="tns:TimeSoap12">
-      <soap12:address location="https://www.satan.lt/WebServices/Time.asmx"/>
-    </wsdl:port>
-    <wsdl:port name="TimeHttpGet" binding="tns:TimeHttpGet">
-      <http:address location="https://www.satan.lt/WebServices/Time.asmx"/>
-    </wsdl:port>
-    <wsdl:port name="TimeHttpPost" binding="tns:TimeHttpPost">
-      <http:address location="https://www.satan.lt/WebServices/Time.asmx"/>
-    </wsdl:port>
-  </wsdl:service>
-</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint></con:endpoints><con:operation id="ac6eb7b6-c66f-4027-bd15-d1abc8cf1441" isOneWay="false" action="http://tempuri.org/GetDatabaseInfo" name="GetDatabaseInfo" bindingOperationName="GetDatabaseInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2ad699f7-495a-4f9b-845b-3374eec933ca" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <tem:GetDatabaseInfo/>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetDatabaseInfo"/></con:call></con:operation><con:operation id="2af7c281-fabf-4c9a-bbc4-f8f65cd08837" isOneWay="false" action="http://tempuri.org/GetDatabaseUtcTime" name="GetDatabaseUtcTime" bindingOperationName="GetDatabaseUtcTime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2ef7d012-a493-4575-833c-23c4b719dd50" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <tem:GetDatabaseUtcTime/>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetDatabaseUtcTime"/></con:call></con:operation><con:operation id="4b9caf4c-751e-45b2-8289-12ed1150d9c0" isOneWay="false" action="http://tempuri.org/GetRemoteTime" name="GetRemoteTime" bindingOperationName="GetRemoteTime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="cc3a34bb-f5c1-4734-8df6-57ef62b4d36b" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <tem:GetRemoteTime/>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetRemoteTime"/></con:call></con:operation><con:operation id="9b9da238-83fb-4142-a4bf-cf4dd3d7a323" isOneWay="false" action="http://tempuri.org/GetServerLocalTime" name="GetServerLocalTime" bindingOperationName="GetServerLocalTime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="b1b5004d-5637-4e17-94eb-d346802a3979" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <tem:GetServerLocalTime/>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetServerLocalTime"/></con:call></con:operation><con:operation id="6a2b246e-abc4-44b8-8670-1aef7f47e3e9" isOneWay="false" action="http://tempuri.org/GetServerUtcTime" name="GetServerUtcTime" bindingOperationName="GetServerUtcTime" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="6aee49b4-9fcc-48f3-915e-5f3e6e27ce9a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.satan.lt/WebServices/Time.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <tem:GetServerUtcTime/>\r
-   </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://tempuri.org/GetServerUtcTime"/></con:call></con:operation></con:interface><con:testSuite id="4f9678ec-3a26-4f5a-9d7f-ee6e6e9bae7a" name="CountryInfoServiceSoapBinding TestSuite"><con:settings/><con:runType>PARALLELL</con:runType><con:testCase id="a02d2051-c1f8-46ca-883d-6e191fd7b6f6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CapitalCity TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="db4ee0cd-d9a5-44cd-9413-e39e7be46868" name="CapitalCity"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>CapitalCity</con:operation><con:request name="CapitalCity" id="8c270ab6-38f0-4ce2-bc3d-34a645158760"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">\r
+</soapenv:Envelope>]]></con:request><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/ListOfLanguagesByNameRequest"/></con:call></con:operation></con:interface><con:testSuite id="4f9678ec-3a26-4f5a-9d7f-ee6e6e9bae7a" name="CountryInfoServiceSoapBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="a02d2051-c1f8-46ca-883d-6e191fd7b6f6" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CapitalCity TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="db4ee0cd-d9a5-44cd-9413-e39e7be46868" name="CapitalCity"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>CapitalCity</con:operation><con:request name="CapitalCity" id="8c270ab6-38f0-4ce2-bc3d-34a645158760"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <web:CapitalCity>\r
-         <web:sCountryISOCode>?</web:sCountryISOCode>\r
+         <web:sCountryISOCode>BO</web:sCountryISOCode>\r
       </web:CapitalCity>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/CapitalCityRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8970334e-2f33-4386-869b-1e273f472258" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CountriesUsingCurrency TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="37ba3fe6-c526-4662-b3d0-ed35a8e03b26" name="CountriesUsingCurrency"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>CountriesUsingCurrency</con:operation><con:request name="CountriesUsingCurrency" id="525cdfda-3b46-4e51-9242-9c153e10cb0c"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">\r
+</soapenv:Envelope>]]></con:request><con:assertion type="Valid HTTP Status Codes" id="2ec3d73a-526b-4e98-b160-37f7ae651e54" name="Valid HTTP_RT1_Status_Codes"><con:configuration><codes>200,201,202,203,204</codes></con:configuration></con:assertion><con:assertion type="Invalid HTTP Status Codes" id="143fbaed-cccc-4474-985d-0e4f7a3a7fde" name="Invalid HTTP_RT2_Status_Codes"><con:configuration><codes>500,501,502,503</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="492faa43-14b6-40ef-93a2-ff01d3ed3dad" name="Response_RT3_SLA"><con:configuration><SLA>500</SLA></con:configuration></con:assertion><con:assertion type="XPath Match" id="574845f9-57eb-413c-834e-372f7a0b64d1" name="XPath_R1_Capital"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
+
+//m:CapitalCityResult[.="La Paz"]</path><content>La Paz</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/CapitalCityRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8970334e-2f33-4386-869b-1e273f472258" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CountriesUsingCurrency TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="37ba3fe6-c526-4662-b3d0-ed35a8e03b26" name="CountriesUsingCurrency"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>CountriesUsingCurrency</con:operation><con:request name="CountriesUsingCurrency" id="525cdfda-3b46-4e51-9242-9c153e10cb0c"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <web:CountriesUsingCurrency>\r
@@ -1655,16 +1204,19 @@ declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
          <web:sCountryISOCode>?</web:sCountryISOCode>\r
       </web:FullCountryInfo>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/FullCountryInfoRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6f4e130d-722e-406b-ab25-f0b5d4ffb5d8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="FullCountryInfoAllCountries TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="d53ecf14-fd90-4fb4-ae96-68e4440fdb8c" name="FullCountryInfoAllCountries"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>FullCountryInfoAllCountries</con:operation><con:request name="FullCountryInfoAllCountries" id="24009410-887d-4524-95bd-13d3adeb13bf"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/FullCountryInfoRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6f4e130d-722e-406b-ab25-f0b5d4ffb5d8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="FullCountryInfoAllCountries TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="d53ecf14-fd90-4fb4-ae96-68e4440fdb8c" name="FullCountryInfoAllCountries"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>FullCountryInfoAllCountries</con:operation><con:request name="FullCountryInfoAllCountries" id="24009410-887d-4524-95bd-13d3adeb13bf"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <web:FullCountryInfoAllCountries/>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/FullCountryInfoAllCountriesRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6f5060f3-dc1b-45c9-b09f-6cf0ecbe8750" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="LanguageISOCode TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="22e70e54-53eb-42a9-8180-886fb88539db" name="LanguageISOCode"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>LanguageISOCode</con:operation><con:request name="LanguageISOCode" id="4e3f8e8b-45d2-49f2-b888-f7fcab3f93a8"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">\r
+</soapenv:Envelope>]]></con:request><con:assertion type="Invalid HTTP Status Codes" id="a603bdd6-7bdb-4560-870e-465e3c17363f" name="Invalid HTTP_RT2_Status_Codes"><con:configuration><codes>500,501,502,503,504</codes></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="8597e94c-9947-4d8f-ad8d-4c7e1e71c050" name="Valid HTTP_RT1_Status_Codes"><con:configuration><codes>200,201,202,203,204</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="5b0ea300-e23a-4e26-91ab-35a2d518626e" name="Response SLA"><con:configuration><SLA>1000</SLA></con:configuration></con:assertion><con:assertion type="XPath Match" id="ce58129e-3cca-4a4b-b25d-f1bda63a8c34" name="XPath Match"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
+
+//m:sName[.="Bolivia"] and //m:sName[.="Argentina"] and //m:sName[.="Venezuela"]</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/FullCountryInfoAllCountriesRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="6f5060f3-dc1b-45c9-b09f-6cf0ecbe8750" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="LanguageISOCode TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="22e70e54-53eb-42a9-8180-886fb88539db" name="LanguageISOCode"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>LanguageISOCode</con:operation><con:request name="LanguageISOCode" id="4e3f8e8b-45d2-49f2-b888-f7fcab3f93a8"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <web:LanguageISOCode>\r
-         <web:sLanguageName>?</web:sLanguageName>\r
+         <web:sLanguageName>EU</web:sLanguageName>\r
       </web:LanguageISOCode>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/LanguageISOCodeRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="1ecb39d0-ce96-48ca-8c66-ab613e390edb" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="LanguageName TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="c6d98bfb-1953-49ea-9c96-14a27fa6d55b" name="LanguageName"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>LanguageName</con:operation><con:request name="LanguageName" id="3cd156f6-c060-4a31-ac10-32a51e90f59e"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">\r
@@ -1674,12 +1226,12 @@ declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
          <web:sISOCode>?</web:sISOCode>\r
       </web:LanguageName>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/LanguageNameRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8fcacede-c048-445d-b535-167001d34799" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ListOfContinentsByCode TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="ee652f42-e224-49b6-a5b3-47f4962545fe" name="ListOfContinentsByCode"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>ListOfContinentsByCode</con:operation><con:request name="ListOfContinentsByCode" id="95fd871c-20d1-4cad-9d32-084104530c04"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/LanguageNameRequest"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="8fcacede-c048-445d-b535-167001d34799" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ListOfContinentsByCode TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="ee652f42-e224-49b6-a5b3-47f4962545fe" name="ListOfContinentsByCode"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>ListOfContinentsByCode</con:operation><con:request name="ListOfContinentsByCode" id="95fd871c-20d1-4cad-9d32-084104530c04"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <web:ListOfContinentsByCode/>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/ListOfContinentsByCodeRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="0d09cff8-d55a-4228-aa3e-c1ffb7220b49" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ListOfContinentsByName TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="4656227b-af3c-47a1-aff5-05485dc5482c" name="ListOfContinentsByName"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>ListOfContinentsByName</con:operation><con:request name="ListOfContinentsByName" id="b01e16a8-2874-4450-8794-439942f6940d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">\r
+</soapenv:Envelope>]]></con:request><con:assertion type="Invalid HTTP Status Codes" id="65fb4768-947f-421e-b400-4615f51d4081" name="Invalid HTTP_RT2_Status_Codes"><con:configuration><codes>500,501,502,503,504</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="92a25a74-877b-42a9-b530-f55469b966a4" name="Response SLA_RT3"><con:configuration><SLA>500</SLA></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="b4de18d1-b33e-46b8-aaea-4058f1072b7f" name="Valid HTTP_RT1_Status_Codes"><con:configuration><codes>200,201,202,203,204</codes></con:configuration></con:assertion><con:assertion type="XPath Match" id="551aef79-dba8-4349-a15b-552d289036ff" name="XPath Match"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/ListOfContinentsByCodeRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="0d09cff8-d55a-4228-aa3e-c1ffb7220b49" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ListOfContinentsByName TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="4656227b-af3c-47a1-aff5-05485dc5482c" name="ListOfContinentsByName"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>ListOfContinentsByName</con:operation><con:request name="ListOfContinentsByName" id="b01e16a8-2874-4450-8794-439942f6940d"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <web:ListOfContinentsByName/>\r
@@ -1723,7 +1275,7 @@ declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
    <soapenv:Body>\r
       <web:ListOfCurrenciesByName/>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/ListOfCurrenciesByNameRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="06ffedc9-f2f7-4431-a96c-8c4429ea1ef1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ListOfLanguagesByCode TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="771b921d-1755-4b2c-888d-c522d598202f" name="ListOfLanguagesByCode"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>ListOfLanguagesByCode</con:operation><con:request name="ListOfLanguagesByCode" id="a39a7f9b-71d8-46c9-aa60-56d8a0e1267b"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/ListOfCurrenciesByNameRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="06ffedc9-f2f7-4431-a96c-8c4429ea1ef1" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ListOfLanguagesByCode TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="771b921d-1755-4b2c-888d-c522d598202f" name="ListOfLanguagesByCode"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>ListOfLanguagesByCode</con:operation><con:request name="ListOfLanguagesByCode" id="a39a7f9b-71d8-46c9-aa60-56d8a0e1267b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">\r
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <web:ListOfLanguagesByCode/>\r
@@ -1738,7 +1290,10 @@ declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
    <soapenv:Body>\r
       <web:ListOfCountryNamesByCode/>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="6e632a34-3643-4472-9eb3-5c521d7ad849" name="Contains"><con:configuration><token>[A-Z]</token><ignoreCase>true</ignoreCase><useRegEx>true</useRegEx></con:configuration></con:assertion><con:assertion type="XPath Match" id="edfcfd7d-163f-4465-b912-ee6f8ea06136" name="XPath_Paises_Sudamericanos"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="6e632a34-3643-4472-9eb3-5c521d7ad849" name="Contains"><con:configuration><token>[A-Z]</token><ignoreCase>true</ignoreCase><useRegEx>true</useRegEx></con:configuration></con:assertion><con:assertion type="XPath Match" id="8220e22c-5e04-4fdb-ac6f-b4db24698884" name="XPath Match 2"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
+
+//*:sISOCode</path><content/><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>true</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="edfcfd7d-163f-4465-b912-ee6f8ea06136" name="XPath_Paises_Sudamericanos"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
 declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
 
 //m:tCountryCodeAndName//m:sName[.="Argentina"]//..//m:sISOCode and  //m:tCountryCodeAndName//m:sName[.="Bolivia"]//..//m:sISOCode</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XQuery Match" id="43dc1b08-84a3-466d-a54b-98178fd71c12" name="XQuery_R4_List_ISOCodes_>BE"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
@@ -1779,4 +1334,53 @@ for $z in //m:tCountryCodeAndName/data(m:sISOCode[.="YE" or .="ZA"])
 
 return $z
 }
-&lt;/result></path><content>&lt;result>YE ZA&lt;/result></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="ea0c589d-60c5-4e51-b307-7ffb48dfaf32" name="Valid HTTP_RT1_Status_Codes"><con:configuration><codes>200,201,202,203,204</codes></con:configuration></con:assertion><con:assertion type="Invalid HTTP Status Codes" id="dd44c862-8f6d-49b9-98d9-47f2e35a011c" name="Invalid HTTP_RT2_Status_Codes"><con:configuration><codes>500,501,502,503,504</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="50b9d87d-7e7d-4c75-9d18-0e1ee5e7d727" name="Response_RT3_SLA"><con:configuration><SLA>15000</SLA></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/ListOfCountryNamesByCodeRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+&lt;/result></path><content>&lt;result>YE ZA&lt;/result></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="ea0c589d-60c5-4e51-b307-7ffb48dfaf32" name="Valid HTTP_RT1_Status_Codes"><con:configuration><codes>200,201,202,203,204</codes></con:configuration></con:assertion><con:assertion type="Invalid HTTP Status Codes" id="dd44c862-8f6d-49b9-98d9-47f2e35a011c" name="Invalid HTTP_RT2_Status_Codes"><con:configuration><codes>500,501,502,503,504</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="50b9d87d-7e7d-4c75-9d18-0e1ee5e7d727" name="Response_RT3_SLA"><con:configuration><SLA>500</SLA></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/ListOfCountryNamesByCodeRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="b3757207-e044-43bd-8854-640a96968177" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ListOfCountryNamesByCode TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="ab589130-d729-498d-a274-7c379a70e17d" name="ListOfCountryNamesByCode"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountryInfoServiceSoapBinding</con:interface><con:operation>ListOfCountryNamesByCode</con:operation><con:request name="ListOfCountryNamesByCode" id="e36ff144-56b4-41ef-a529-973e71f826ae"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.oorsprong.org/websamples.countryinfo">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <web:ListOfCountryNamesByCode/>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="Simple Contains" id="6e632a34-3643-4472-9eb3-5c521d7ad849" name="Contains"><con:configuration><token>[A-Z]</token><ignoreCase>true</ignoreCase><useRegEx>true</useRegEx></con:configuration></con:assertion><con:assertion type="XPath Match" id="8220e22c-5e04-4fdb-ac6f-b4db24698884" name="XPath Match 2"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
+
+//*:sISOCode</path><content/><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>true</ignoreComments></con:configuration></con:assertion><con:assertion type="XPath Match" id="edfcfd7d-163f-4465-b912-ee6f8ea06136" name="XPath_Paises_Sudamericanos"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
+
+//m:tCountryCodeAndName//m:sName[.="Argentina"]//..//m:sISOCode and  //m:tCountryCodeAndName//m:sName[.="Bolivia"]//..//m:sISOCode</path><content>true</content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XQuery Match" id="43dc1b08-84a3-466d-a54b-98178fd71c12" name="XQuery_R4_List_ISOCodes_>BE"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
+
+
+&lt;Result>
+{
+for $z in //m:tCountryCodeAndName/data(m:sISOCode[.>"BE"])
+return $z
+}
+&lt;/Result></path><content>&lt;Result>BF BG BH BI BJ BL BM BN BO BQ BR BS BT BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW&lt;/Result></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XQuery Match" id="652c0f74-e559-47dd-ba34-b84083c018a5" name="XQuery_List_Names_Order"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
+
+
+&lt;Result>
+{
+for $z in //m:tCountryCodeAndName/data(m:sName)
+
+order by $z
+
+return $z
+}
+&lt;/Result></path><content><![CDATA[<Result><![CDATA[Afghanistan Albania Algeria American Samoa Andorra Angola Anguilla Antarctica Antigua & Barbuda Argentina Armenia Aruba Australia Austria Azerbaijan Bahamas Bahrain Bangladesh Barbados Belarus Belgium Belize Benin Bermuda Bhutan Bolivia Bonaire, Sint Eustatius and Saba Bosnia & Herzegovina Botswana Bouvet Island Brazil British Indian Ocean Territory Brunei-Darussalam Bulgaria Burkina Faso Burundi Cambodia Cameroon Canada Cape Verde Cayman Islands Central African Republic Chad Chile China Chrismas Island Cocos (Keeling) Islands Collectivity of Saint Martin Colombia Comoros Congo Congo, Democratic Republic Cook Islands Costa Rica Croatia Cuba Curaçao Cyprus Czech Republic Côte D'Ivoire (Ivory Coast) Denmark Djibouti Dominica Dominican Republic Ecuador Egypt El Salvador Equatorial Guinea Eritrea Estonia Ethiopia Falkand Islands (Malvinas) Faroe Islands Fiji Finland France French Guiana French Polynesia French Southern Territories Gabon Gambia Georgia Germany Ghana Gibraltar Greece Greenland Grenada Guadeloupe Guam Guatemala Guinea Guinea-Bissau Guyana Haiti Heard Island And McDonald Islands Honduras Hong Kong Hungary Iceland India Indonesia Iran Iraq Ireland Israel Italy Jamaica Japan Jordan Kazakhstan Kenya Kiribati Kuwait Kyrgyzstan Laos Latvia Lebanon Lesotho Liberia Libyan Arab Jamahiriya Liechtenstein Lithuania Luxembourg Macao Macedonia  (former YR) Madagascar Malawi Malaysia Maldives (Maladive Ilands) Mali Malta Marshall Islands Martinique Mauritania Mauritius Mayotte Mexico Micronesia  (Federa States of) Moldova, Republic of Monaco Mongolia Montenegro Montserrat Morocco Mozambique Myanmar (Burma) Namibia Nauru Nepal Netherlands Netherlands Antilles New Caledonia New Zealand Nicaragua Niger Nigeria Niue Norfolk Island North Korea Northern Mariana Islands Norway Oman Pakistan Palau Palestinian Territory, Occupied Panama Papua-New Guinea Paraguay Peru Philippines Pitcairn Poland Portugal Puerto Rico Quatar Reunion Romania Russian Federation Rwanda Saint Barthélemy Saint Helena, Ascension and Tristan da Cunha Saint Pierre And Micquelon San Marino Sao Tome & Principe Saudi Arabia Senegal Serbia Seychelles Sierra Leone Singapore Sint-Maarten Slovakia Slovenia Solomon Islands Somalia South Africa South Georgia & South Sandwich Islands South Korea Spain Sri Lanka St. Kitts & Nevis St. Lucia St. Vincent & Grenadines Sudan Suriname Svalbard And Jan Mayen Swaziland Sweden Switzerland Syrian Arab Republic Taiwan Tajikistan Tanzania Thailand Timor-Leste Togo Tokelau Tonga Trinidad & Tobago Tunisia Turkey Turkmenistan Turks And Caicos Islands Tuvalu Uganda Ukraine United Arab Emirates United Kingdom United States United States Minor Outlying Islands Uruguay Uzbekistan Vanuatu Vatican City Venezuela Vietnam Virgin Islands, British Virgin Islands, U.S. Wallis And Futuna Western Sahara Western Samoa Yemen Zambia Zimbabwe Åland Islands]]]]>><![CDATA[</Result>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XQuery Match" id="652c0f74-e559-47dd-ba34-b84083c018a5" name="XQuery_R3_List_ISOCodes"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
+
+
+&lt;Result>
+{
+for $z in //m:tCountryCodeAndName/data(m:sISOCode)
+return $z
+}
+&lt;/Result></path><content>&lt;Result>AD AE AF AG AI AL AM AN AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS BT BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH ER ES ET FI FJ FK FM FO FR GA GB GD GE GF GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU ID IE IL IN IO IQ IR IS IT JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR MS MT MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG UM US UY UZ VA VC VE VG VI VN VU WF WS YE YT ZA ZM ZW&lt;/Result></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="XQuery Match" id="c5ec6d0f-2be8-409a-8f47-1b660976bea1" name="XQuery _R4_List_ISO_Codes_YE_ZA"><con:configuration><path>declare namespace soap='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace m='http://www.oorsprong.org/websamples.countryinfo';
+&lt;result>
+{
+for $z in //m:tCountryCodeAndName/data(m:sISOCode[.="YE" or .="ZA"])
+
+return $z
+}
+&lt;/result></path><content>&lt;result>YE ZA&lt;/result></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:assertion type="Valid HTTP Status Codes" id="ea0c589d-60c5-4e51-b307-7ffb48dfaf32" name="Valid HTTP_RT1_Status_Codes"><con:configuration><codes>200,201,202,203,204</codes></con:configuration></con:assertion><con:assertion type="Invalid HTTP Status Codes" id="dd44c862-8f6d-49b9-98d9-47f2e35a011c" name="Invalid HTTP_RT2_Status_Codes"><con:configuration><codes>500,501,502,503,504</codes></con:configuration></con:assertion><con:assertion type="Response SLA Assertion" id="50b9d87d-7e7d-4c75-9d18-0e1ee5e7d727" name="Response_RT3_SLA"><con:configuration><SLA>500</SLA></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig action="http://www.oorsprong.org/websamples.countryinfo/CountryInfoServiceSoapType/ListOfCountryNamesByCodeRequest" mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

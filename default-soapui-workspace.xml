@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <con:soapui-workspace name="Projects" soapui-version="5.7.0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings/>
-  <con:project name="SOAP_Time">D:/WorkspaceServicios/SOAP_Time-soapui-project.xml</con:project>
+  <con:project name="Time">D:/WorkspaceServicios/Time-soapui-project.xml</con:project>
   <con:project name="SOAP_1_CountryInfoService">D:/WorkspaceServicios/SOAP-1-CountryInfoService-soapui-project.xml</con:project>
   <con:project name="SOAP1_Calculator">D:/WorkspaceServicios/SOAP-1-calculator-soapui-project.xml</con:project>
   <con:project name="REST_CountryInfoService">D:/WorkspaceServicios/REST-CountryInfoService-soapui-project.xml</con:project>
